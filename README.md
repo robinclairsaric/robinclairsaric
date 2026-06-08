@@ -12,8 +12,7 @@
   <img src="https://img.shields.io/badge/gRPC-244c5a?style=for-the-badge&logo=trpc&logoColor=white"/>
   <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white"/>
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Ethereum-3C3C3D?style=for-the-badge&logo=ethereum&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Linux-1A1A1A?style=for-the-badge&logo=linux&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Web3-chain--agnostic-6F4FF2?style=for-the-badge&logo=web3dotjs&logoColor=white"/>
 </p>
 
 ---
@@ -32,7 +31,7 @@
 |---|---|
 | **Core** | Rust · Python · Tokio · async/await |
 | **Services** | axum (REST) · tonic (gRPC) · PostgreSQL (sqlx) |
-| **Trading** | market microstructure · order-book engines · EVM / Web3 (k256) |
+| **Trading** | market microstructure · order-book engines · **chain-agnostic Web3** — any chain via adapter (k256 signing) |
 | **Craft** | `tracing` observability · Criterion benchmarks · property-based testing · Docker |
 
 ### 🔭 Currently building
