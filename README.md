@@ -1,7 +1,7 @@
-<h1 align="center">Hi, I'm Robin 👋</h1>
+<h1 align="center">Hi, I'm Robin CLAIR SARIC</h1>
 
 <p align="center">
-  <b>Quant trader &amp; low-latency systems engineer</b><br/>
+  <b>Quant trader</b><br/>
   Building an HFT firm — and its software — from the metal up.
 </p>
 
