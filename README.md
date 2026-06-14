@@ -21,7 +21,7 @@
 
 - 🏦 **Quant trader** at a hedge fund — building my own **HFT firm &amp; trading software**
 - 🦀 Architecting **low-latency systems in Rust** — Hexagonal Architecture · DDD · CQRS
-- 📈 **Multi-exchange arbitrage** across crypto &amp; prediction markets — 18+ venue integrations
+- 📈 **Cross-venue, multi-asset arbitrage** — **21 venue integrations** across CEX, DEX &amp; TradFi brokerage, unified under one model
 - ⚡ Obsessed with **sub-microsecond hot paths**: zero-alloc, SIMD-friendly, deterministic execution
 - 🎓 **HEC Paris × IMT Atlantique** — finance × engineering
 
@@ -34,16 +34,27 @@
 | **Trading** | market microstructure · order-book engines · **chain-agnostic Web3** — any chain via adapter (k256 signing) |
 | **Craft** | `tracing` observability · Criterion benchmarks · property-based testing · Docker |
 
-### 🔭 Currently building
+### 🔭 Featured — **Argos**
 
-A hexagonal, registry-driven arbitrage engine — *N exchanges × N strategies, with **zero modification** of existing code to add either.*
+> **All-seeing cross-venue arbitrage engine** — *N exchanges × N strategies, with **zero modification** of existing code to add either.* Hexagonal · registry-driven · benchmark-gated · **running live**.
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Rust-stable-000000?style=flat-square&logo=rust&logoColor=white"/>
+  <img src="https://img.shields.io/badge/21_venues-4_market_types-4169E1?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Decision_logic-sub--µs-FF6B00?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Benchmarks-Criterion_gated-2EA043?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Source-private_·_NDA-555555?style=flat-square"/>
+</p>
+
+Source is **private** to protect the edge. A full architecture, scale &amp; benchmarked-performance
+walkthrough — and a live benchmark run — is available **under NDA**: [get in touch](#-contact).
 
 ---
 
 <!--
   📊 GitHub stats cards are ready below.
-  They read PUBLIC activity only — with 0 public repos they'd render near-empty,
-  so they're commented out for now. Uncomment once you have public contributions
+  They read PUBLIC activity only — most of my work lives in private repos,
+  so they're commented out for now. Uncomment once there's public activity to show
   (or self-host github-readme-stats with a token to also count private work).
 
 <p align="center">
@@ -52,11 +63,9 @@ A hexagonal, registry-driven arbitrage engine — *N exchanges × N strategies, 
 </p>
 -->
 
-<!--
-  📬 Contact — uncomment and fill in to make these clickable:
+### 📬 Contact
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/YOUR-HANDLE"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white"/></a>
-  <a href="mailto:YOUR-EMAIL"><img src="https://img.shields.io/badge/Email-333333?style=flat&logo=gmail&logoColor=white"/></a>
+  <a href="https://www.linkedin.com/in/robin-clair-saric-461326206"><img src="https://img.shields.io/badge/LinkedIn-Robin_Clair--Saric-0A66C2?style=flat-square&logo=linkedin&logoColor=white"/></a>
+  <a href="mailto:robinclair24@gmail.com"><img src="https://img.shields.io/badge/Email-robinclair24@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white"/></a>
 </p>
--->
