@@ -21,7 +21,8 @@
 
 - 🏦 **Quant trader** at a hedge fund — building my own **HFT firm &amp; trading software**
 - 🦀 Architecting **low-latency systems in Rust** — Hexagonal Architecture · DDD · CQRS
-- 📈 **Cross-venue, multi-asset arbitrage** — **21 venue integrations** across CEX, DEX &amp; TradFi brokerage, unified under one model
+- 📈 **Cross-venue, multi-asset trading** — **21 venue integrations** across CEX, DEX &amp; TradFi brokerage, unified under one model
+- 🧮 **Derivatives &amp; outcome pricing** — options (Black-Scholes, implied vol, term structure), perpetual funding, and cost models that fail closed rather than guess
 - ⚡ Obsessed with **sub-microsecond hot paths**: zero-alloc, SIMD-friendly, deterministic execution
 - 🎓 **HEC Paris × IMT Atlantique** — finance × engineering
 
@@ -30,13 +31,13 @@
 | | |
 |---|---|
 | **Core** | Rust · Python · Tokio · async/await |
-| **Services** | axum (REST) · tonic (gRPC) · PostgreSQL (sqlx) |
-| **Trading** | market microstructure · order-book engines · **chain-agnostic Web3** — any chain via adapter (k256 signing) |
+| **Services** | axum (REST) · tonic (gRPC) · PostgreSQL (sqlx) · write-ahead logging &amp; immutable ledgers |
+| **Trading** | market microstructure · order-book engines · options &amp; outcome pricing · **chain-agnostic Web3** — any chain via adapter |
 | **Craft** | `tracing` observability · Criterion benchmarks · property-based testing · Docker |
 
 ### 🔭 Featured — **Argos**
 
-> **All-seeing cross-venue arbitrage engine** — *N exchanges × N strategies, with **zero modification** of existing code to add either.* Hexagonal · registry-driven · benchmark-gated · **running live**.
+> **All-seeing cross-venue trading engine** — *N venues × N strategies, with **zero modification** of existing code to add either.* Hexagonal · registry-driven · benchmark-gated · **running live**.
 
 <p align="center">
   <img src="https://img.shields.io/badge/Rust-stable-000000?style=flat-square&logo=rust&logoColor=white"/>
@@ -45,6 +46,11 @@
   <img src="https://img.shields.io/badge/Benchmarks-Criterion_gated-2EA043?style=flat-square"/>
   <img src="https://img.shields.io/badge/Source-private_·_NDA-555555?style=flat-square"/>
 </p>
+
+One engine, several return sources — each a module behind a port, gated by the *same* pre-trade risk
+chain and the *same* cost model, so a strategy can never grant itself a cheaper path to the wire.
+Roughly **840k lines of Rust** across **1,468 files**, **14,762** test functions, **45** property-based
+test blocks and **29** benchmark suites that gate CI. <sub>(Counted at HEAD, 2026-08-26.)</sub>
 
 Source is **private** to protect the edge. A full architecture, scale &amp; benchmarked-performance
 walkthrough — and a live benchmark run — is available **under NDA**: [get in touch](#-contact).
