@@ -24,10 +24,10 @@
 ### Areas of work
 
 - **Trading systems in Rust** — hexagonal architecture, domain-driven design, CQRS, event-driven pipelines.
-- **Cross-venue, multi-asset execution** — centralized and on-chain crypto venues, prediction and betting
-  markets, and a brokerage, unified behind one domain model.
-- **Pricing** — options (Black-Scholes, implied volatility, term structure), perpetual funding, binary
-  outcomes, and cost models that refuse to trade rather than guess when an input is missing.
+- **Cross-venue, multi-asset execution** — centralized and decentralized exchanges and a TradFi brokerage,
+  unified behind one domain model.
+- **Pricing** — options (Black-Scholes, implied volatility, term structure), perpetual funding, outcome
+  pricing, and cost models that refuse to trade rather than guess when an input is missing.
 - **Performance engineering** — allocation-free hot paths, benchmark-gated changes (Criterion).
 
 ### Tech
@@ -47,7 +47,7 @@ checks and the same cost model.
 
 | | |
 |---|---|
-| **Venues** | 22 adapters across 21 venues — crypto exchanges, on-chain perpetuals, prediction and betting markets, a brokerage |
+| **Venues** | 21 venues across 4 market types — CEX, DEX and TradFi brokerage |
 | **Codebase** | ~1.16M lines of Rust in 1,636 files |
 | **Tests** | 21,136 unit and async test functions · 46 property-based test blocks |
 | **Benchmarks** | 31 Criterion benchmark files |
