@@ -1,75 +1,65 @@
-<h1 align="center">Hi, I'm Robin CLAIR SARIC</h1>
+<h1 align="center">Robin Clair-Saric</h1>
 
 <p align="center">
-  <b>Quant trader</b><br/>
-  Building an HFT firm — and its software — from the metal up.
+  Quantitative trader · Rust systems engineer
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Tokio-000000?style=for-the-badge&logo=rust&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
-  <img src="https://img.shields.io/badge/gRPC-244c5a?style=for-the-badge&logo=trpc&logoColor=white"/>
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Web3-chain--agnostic-6F4FF2?style=for-the-badge&logo=web3dotjs&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Tokio-000000?style=flat-square&logo=rust&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/gRPC-244c5a?style=flat-square"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white"/>
 </p>
 
 ---
 
-### 🧠 About
+### About
 
-- 🏦 **Quant trader** at a hedge fund — building my own **HFT firm &amp; trading software**
-- 🦀 Architecting **low-latency systems in Rust** — Hexagonal Architecture · DDD · CQRS
-- 📈 **Cross-venue, multi-asset trading** — **21 venue integrations** across CEX, DEX &amp; TradFi brokerage, unified under one model
-- 🧮 **Derivatives &amp; outcome pricing** — options (Black-Scholes, implied vol, term structure), perpetual funding, and cost models that fail closed rather than guess
-- ⚡ Obsessed with **sub-microsecond hot paths**: zero-alloc, SIMD-friendly, deterministic execution
-- 🎓 **HEC Paris × IMT Atlantique** — finance × engineering
+- Quantitative trader at a hedge fund.
+- Designing and building a proprietary trading system, from market-data ingestion to order execution.
+- Background in finance and engineering: HEC Paris × IMT Atlantique.
 
-### 🛠️ Tech
+### Areas of work
+
+- **Trading systems in Rust** — hexagonal architecture, domain-driven design, CQRS, event-driven pipelines.
+- **Cross-venue, multi-asset execution** — centralized and on-chain crypto venues, prediction and betting
+  markets, and a brokerage, unified behind one domain model.
+- **Pricing** — options (Black-Scholes, implied volatility, term structure), perpetual funding, binary
+  outcomes, and cost models that refuse to trade rather than guess when an input is missing.
+- **Performance engineering** — allocation-free hot paths, benchmark-gated changes (Criterion).
+
+### Tech
 
 | | |
 |---|---|
-| **Core** | Rust · Python · Tokio · async/await |
-| **Services** | axum (REST) · tonic (gRPC) · PostgreSQL (sqlx) · write-ahead logging &amp; immutable ledgers |
-| **Trading** | market microstructure · order-book engines · options &amp; outcome pricing · **chain-agnostic Web3** — any chain via adapter |
-| **Craft** | `tracing` observability · Criterion benchmarks · property-based testing · Docker |
+| **Languages** | Rust · Python |
+| **Services** | Tokio · axum (REST) · tonic (gRPC) · PostgreSQL (sqlx) |
+| **Trading** | market microstructure · order-book engines · derivatives and outcome pricing · EVM and Solana integration |
+| **Practice** | `tracing` observability · Criterion benchmarks · property-based testing · Docker |
 
-### 🔭 Featured — **Argos**
+### Featured project — Argos
 
-> **All-seeing cross-venue trading engine** — *N venues × N strategies, with **zero modification** of existing code to add either.* Hexagonal · registry-driven · benchmark-gated · **running live**.
+A cross-venue trading engine written in Rust. Venues and strategies are adapters behind ports, so either
+can be added without modifying the tested core; every strategy goes through the same pre-trade risk
+checks and the same cost model.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Rust-stable-000000?style=flat-square&logo=rust&logoColor=white"/>
-  <img src="https://img.shields.io/badge/21_venues-4_market_types-4169E1?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Decision_logic-sub--µs-FF6B00?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Benchmarks-Criterion_gated-2EA043?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Source-private_·_NDA-555555?style=flat-square"/>
-</p>
+| | |
+|---|---|
+| **Venues** | 22 adapters across 21 venues — crypto exchanges, on-chain perpetuals, prediction and betting markets, a brokerage |
+| **Codebase** | ~1.16M lines of Rust in 1,636 files |
+| **Tests** | 21,136 unit and async test functions · 46 property-based test blocks |
+| **Benchmarks** | 31 Criterion benchmark files |
+| **Status** | pre-production |
 
-One engine, several return sources — each a module behind a port, gated by the *same* pre-trade risk
-chain and the *same* cost model, so a strategy can never grant itself a cheaper path to the wire.
-Roughly **840k lines of Rust** across **1,468 files**, **14,762** test functions, **45** property-based
-test blocks and **29** benchmark suites that gate CI. <sub>(Counted at HEAD, 2026-08-26.)</sub>
+<sub>Figures counted from the source tree on 2026-09-27 (commit <code>a3002a7c</code>) with <code>git ls-tree</code> / <code>git grep</code> over the Rust workspace.</sub>
 
-Source is **private** to protect the edge. A full architecture, scale &amp; benchmarked-performance
-walkthrough — and a live benchmark run — is available **under NDA**: [get in touch](#-contact).
+The source is private. An architecture and code walkthrough is available under NDA on request.
 
 ---
 
-<!--
-  📊 GitHub stats cards are ready below.
-  They read PUBLIC activity only — most of my work lives in private repos,
-  so they're commented out for now. Uncomment once there's public activity to show
-  (or self-host github-readme-stats with a token to also count private work).
-
-<p align="center">
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username=robinclairsaric&show_icons=true&hide_border=true&count_private=true&theme=graywhite"/>
-  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=robinclairsaric&layout=compact&hide_border=true&theme=graywhite"/>
-</p>
--->
-
-### 📬 Contact
+### Contact
 
 <p align="center">
   <a href="https://www.linkedin.com/in/robin-clair-saric-461326206"><img src="https://img.shields.io/badge/LinkedIn-Robin_Clair--Saric-0A66C2?style=flat-square&logo=linkedin&logoColor=white"/></a>
