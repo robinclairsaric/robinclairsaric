@@ -48,12 +48,12 @@ checks and the same cost model.
 | | |
 |---|---|
 | **Venues** | 21 venues across 4 market types — CEX, DEX and TradFi brokerage |
-| **Codebase** | ~1.16M lines of Rust in 1,636 files |
-| **Tests** | 21,136 unit and async test functions · 46 property-based test blocks |
-| **Benchmarks** | 31 Criterion benchmark files |
+| **Codebase** | ~1.62M lines of Rust in 2,044 files |
+| **Tests** | 26,069 unit and async test functions · 72 property-based test blocks |
+| **Benchmarks** | 76 Criterion benchmark programs |
 | **Status** | pre-production |
 
-<sub>Figures counted from the source tree on 2026-09-27 (commit <code>a3002a7c</code>) with <code>git ls-tree</code> / <code>git grep</code> over the Rust workspace.</sub>
+<sub>Figures counted from the source tree on 2026-11-05 with the same definitions as before, over the Rust workspace.</sub>
 
 The source is private. An architecture and code walkthrough is available under NDA on request.
 
