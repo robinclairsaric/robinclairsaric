@@ -28,7 +28,7 @@
   unified behind one domain model.
 - **Pricing** — options (Black-Scholes, implied volatility, term structure), perpetual funding, outcome
   pricing, and cost models that refuse to trade rather than guess when an input is missing.
-- **Performance engineering** — allocation-free hot paths, benchmark-gated changes (Criterion).
+- **Performance engineering** — allocation-free hot paths, Criterion-measured changes.
 
 ### Tech
 
@@ -47,13 +47,13 @@ checks and the same cost model.
 
 | | |
 |---|---|
-| **Venues** | 21 venues across 4 market types — CEX, DEX and TradFi brokerage |
+| **Venues** | 22 venue adapters — CEX, DEX and TradFi brokerage |
 | **Codebase** | ~1.62M lines of Rust in 2,044 files |
 | **Tests** | 26,069 unit and async test functions · 72 property-based test blocks |
 | **Benchmarks** | 76 Criterion benchmark programs |
 | **Status** | pre-production |
 
-<sub>Figures counted from the source tree on 2026-11-05 with the same definitions as before, over the Rust workspace.</sub>
+<sub>Figures counted from the source tree (snapshot of 2026-11-05) with the same definitions as before, over the Rust workspace.</sub>
 
 The source is private. An architecture and code walkthrough is available under NDA on request.
 
